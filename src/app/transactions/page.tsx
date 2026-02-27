@@ -1,15 +1,16 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import TopNav from "@/components/TopNav";
-import { Card } from "@/components/Card";
-import { getSupabase } from "@/lib/supabase";
-import type { Transaction, TxType, TxCategory } from "@/lib/types";
-import { fmtUSD } from "@/lib/money";
-import { todayISO } from "@/lib/date";
-import { Input } from "@/components/Input";
-import { Select } from "@/components/Select";
-import { Button } from "@/components/Button";
+
+import TopNav from "../../components/TopNav";
+import { Card } from "../../components/Card";
+import { Input } from "../../components/Input";
+import { Select } from "../../components/Select";
+import { Button } from "../../components/Button";
+import { getSupabase } from "../../lib/supabase";
+import type { Transaction, TxType, TxCategory } from "../../lib/types";
+import { fmtUSD } from "../../lib/money";
+import { todayISO } from "../../lib/date";
 
 const typeOptions = [
   { value: "", label: "All types" },
