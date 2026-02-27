@@ -1,13 +1,16 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import TopNav from "@/components/TopNav";
-import { Card } from "@/components/Card";
-import TxForm from "@/components/TxForm";
-import { getSupabase } from "@/lib/supabase";
-import type { Transaction } from "@/lib/types";
-import { fmtUSD } from "@/lib/money";
-import { todayISO } from "@/lib/date";
+
+import TopNav from "../components/TopNav";
+import { Card } from "../components/Card";
+import TxForm from "../components/TxForm";
+
+import { getSupabase } from "../lib/supabase";
+import type { Transaction } from "../lib/types";
+import { fmtUSD } from "../lib/money";
+import { todayISO } from "../lib/date";
+
 import { startOfMonth, endOfMonth, format } from "date-fns";
 
 function cashDelta(tx: Transaction) {

@@ -1,14 +1,14 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import TopNav from "@/components/TopNav";
-import { Card } from "@/components/Card";
-import { getSupabase } from "@/lib/supabase";
-import type { Debt } from "@/lib/types";
-import { fmtUSD } from "@/lib/money";
-import { Button } from "@/components/Button";
-import { Input } from "@/components/Input";
-import { Select } from "@/components/Select";
+import TopNav from "../../components/TopNav";
+import { Card } from "../../components/Card";
+import { getSupabase } from "../../lib/supabase";
+import type { Debt } from "../../lib/types";
+import { fmtUSD } from "../../lib/money";
+import { Button } from "../../components/Button";
+import { Input } from "../../components/Input";
+import { Select } from "../../components/Select";
 
 export default function DebtsPage() {
   const supabase = useMemo(() => getSupabase(), []);
