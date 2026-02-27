@@ -1,9 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { getSupabase } from "@/lib/supabase";
-import type { TxCategory, TxType } from "@/lib/types";
-import { todayISO } from "@/lib/date";
+import { getSupabase } from "../lib/supabase";
+import type { TxCategory, TxType } from "../lib/types";
+import { todayISO } from "../lib/date";
+import { fmtUSD } from "../lib/money";
+
 import { Button } from "./Button";
 import { Input } from "./Input";
 import { Select } from "./Select";
