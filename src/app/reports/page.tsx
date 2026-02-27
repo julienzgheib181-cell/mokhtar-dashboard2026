@@ -1,15 +1,16 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import TopNav from "@/components/TopNav";
-import { Card } from "@/components/Card";
-import { getSupabase } from "@/lib/supabase";
-import type { Transaction, TxCategory } from "@/lib/types";
-import { fmtUSD } from "@/lib/money";
-import { startOfMonth, endOfMonth, format } from "date-fns";
-import { Input } from "@/components/Input";
-import { Button } from "@/components/Button";
 
+import TopNav from "../../components/TopNav";
+import { Card } from "../../components/Card";
+import { Input } from "../../components/Input";
+import { Button } from "../../components/Button";
+
+import { getSupabase } from "../../lib/supabase";
+import type { Transaction, TxCategory } from "../../lib/types";
+import { fmtUSD } from "../../lib/money";
+import { startOfMonth, endOfMonth, format } from "date-fns";
 type Row = { category: TxCategory; sales: number; expenses: number; net: number };
 
 function cashDelta(tx: Transaction) {
